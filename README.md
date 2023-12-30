@@ -21,3 +21,16 @@ getTempF(celsius) tp get Fahrenheit from Celsius value.
 23.81 Celsius 73.40 Fahrenheit
 23.75 Celsius 73.40 Fahrenheit
 ```
+ 64.00 Fahrenheit
+18.87 Celsius 64.00 Fahrenheit
+18.87 Celsius 64.00 Fahrenheit
+1
+
+float getTempF(int32_t raw)
+{
+  // return ((float)raw * 0.0140625f) + 32.0f;
+  return (raw * 9 / 5) + 32.0;
+}
+
+float celsius = getTemp();
+

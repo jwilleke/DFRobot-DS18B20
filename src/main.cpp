@@ -72,14 +72,17 @@ float getTemp()
 
   float tempRead = ((MSB << 8) | LSB); // using two's compliment
   float TemperatureSum = tempRead / 16;
-
+  Serial.print("  Celsius : ");
+  Serial.println(TemperatureSum);
   return TemperatureSum;
 }
 
 float getTempF(int32_t raw)
 {
-  // return ((float)raw * 0.0140625f) + 32.0f;
-  return ((float)raw * 9 / 5) + 32.0f;
+  float f =  ((float)raw * 1.8) + 32.0f;
+  Serial.print("  Fahrenheit: ");
+  Serial.println(f);
+  return f;
 }
 
 void setup(void)
@@ -93,11 +96,11 @@ void setup(void)
 void loop(void)
 {
   float celsius = getTemp();
-  Serial.print(celsius);
-  Serial.print(" Celsius ");
+  //Serial.print(celsius);
+  //Serial.print(" Celsius ");
   float fahrenheit = getTempF(celsius);
-  Serial.print(fahrenheit);
-  Serial.println(" Fahrenheit");
+  //Serial.print(fahrenheit);
+  //Serial.println(" Fahrenheit");
 
   delay(1500); // just here to slow down the output so it is easier to read
 }
