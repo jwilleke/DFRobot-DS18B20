@@ -20,17 +20,11 @@ getTempF(celsius) tp get Fahrenheit from Celsius value.
 23.87 Celsius 73.40 Fahrenheit
 23.81 Celsius 73.40 Fahrenheit
 23.75 Celsius 73.40 Fahrenheit
+
 ```
- 64.00 Fahrenheit
-18.87 Celsius 64.00 Fahrenheit
-18.87 Celsius 64.00 Fahrenheit
-1
 
-float getTempF(int32_t raw)
-{
-  // return ((float)raw * 0.0140625f) + 32.0f;
-  return (raw * 9 / 5) + 32.0;
-}
+## Arduino can not deal with high precision numbers
 
-float celsius = getTemp();
+The float data type has only 6-7 decimal digits of precision. That means the total number of digits, not the number to the right of the decimal point. Unlike other platforms, where you can get more precision by using a double (e.g. up to 15 digits), on the Arduino, __double is the same size as float__.
 
+We have been aunable to get any Celsius to Fahrenheit calculations to be accurate.

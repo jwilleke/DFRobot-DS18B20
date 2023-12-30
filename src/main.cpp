@@ -33,11 +33,13 @@ String getChip()
   return chipType;
 }
 
+/**
+ *  returns the temperature from one DS18S20 in DEG Celsius
+*/
 float getTemp()
 {
-  // returns the temperature from one DS18S20 in DEG Celsius
-  byte data[12];
-  // byte addr[8];
+  // I assume this sets the reolution to 12 bits by setting the array byte length to 12.
+  byte data[12]; 
 
   if (!ds.search(addr))
   {
