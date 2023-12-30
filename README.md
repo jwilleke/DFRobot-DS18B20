@@ -1,12 +1,17 @@
 # DS18B20 Temperature Sensor
 
-Code use [1-Wire]
+Code use [OneWire]
+
+## Dallas Temperature Control Library vs DFRobot
+
+We found the [DallasTemperature-DS18B20](https://github.com/jwilleke/DallasTemperature-DS18B20) which uses the  Dallas Temperature Control Library has more features and seems to be easier to use.
+
 
 ## Device
 
-I used this [Gravity: Waterproof DS18B20 Temperature Sensor Kit](https://www.dfrobot.com/product-1354.html)
+We used this [Gravity: Waterproof DS18B20 Temperature Sensor Kit](https://www.dfrobot.com/product-1354.html)
 
-## I statred with the code
+## We statred with the code
 
 [SKU:DFR0198 Waterproof DS18B20 Sensor Wiki](https://wiki.dfrobot.com/Waterproof_DS18B20_Digital_Temperature_Sensor__SKU_DFR0198_) and added few things like 
 getTempF(celsius) tp get Fahrenheit from Celsius value.
